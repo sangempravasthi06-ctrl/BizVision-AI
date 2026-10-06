@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7f3">
+  <meta name="description" content="Sign in to your private BizVision AI business workspace.">
+  <title>Sign in · BizVision AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-story">
+      <a class="brand auth-brand" href="/login" aria-label="BizVision AI">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 23.5V16m7 7.5V9m7 14.5v-11m7 11v-6" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><path d="m5 11 7-5 7 4 8-6" fill="none" stroke="#8cd9b1" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy"><strong>BizVision<span> AI</span></strong><small>BUSINESS, IN FOCUS</small></span>
+      </a>
+      <div class="auth-story-copy">
+        <span class="auth-kicker"><span></span> BUSINESS INTELLIGENCE, MADE PERSONAL</span>
+        <h1>Your Business.<br>Your Data.<br><span>Your Intelligence.</span></h1>
+        <p>Manage your business, understand your data, monitor your inventory, and get AI-powered recommendations — all in one place.</p>
+      </div>
+      <div class="auth-preview" aria-label="Private business dashboard preview">
+        <div class="preview-top"><span><i></i><i></i><i></i></span><span>YOUR BUSINESS, IN FOCUS</span><b>✳</b></div>
+        <div class="preview-business"><span class="preview-store">🏪</span><div><small>YOUR WORKSPACE</small><strong>Business at a glance</strong></div><span class="preview-live">● LIVE</span></div>
+        <div class="preview-metrics"><div><small>Revenue</small><strong>₹1,24,850</strong><em>↗ 12.8%</em></div><div><small>Gross profit</small><strong>₹32,460</strong><em>↗ 8.4%</em></div></div>
+        <div class="preview-chart"><div class="preview-chart-heading"><strong>Sales overview</strong><small>LAST 7 DAYS</small></div><div class="preview-bars"><i style="height:36%"></i><i style="height:53%"></i><i style="height:43%"></i><i style="height:69%"></i><i style="height:58%"></i><i style="height:82%"></i><i style="height:100%"></i></div><div class="preview-days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div></div>
+        <div class="preview-insight"><span>✦</span><p><strong>A useful insight</strong><br>Your best-selling products are driving this week's growth.</p><b>→</b></div>
+      </div>
+      <div class="auth-assurance"><span>🔒</span> Your business data is private and accessible only to you.</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-mobile-brand">🤖 BizVision AI</div>
+        <div class="auth-heading" id="login-heading">
+          <span class="auth-step">YOUR WORKSPACE AWAITS</span>
+          <h2>Welcome Back <span>👋</span></h2>
+          <p>Login to your Business Dashboard</p>
+        </div>
+        <div class="auth-heading" id="register-heading" hidden>
+          <span class="auth-step">GET STARTED — IT'S FREE</span>
+          <h2>Create Your BizVision AI Account <span>🚀</span></h2>
+          <p>Your business deserves a clearer view.</p>
+        </div>
+        <div class="auth-notice" id="auth-notice" role="status" aria-live="polite" hidden></div>
+        <form id="login-form" class="auth-form">
+          <label><span>📧 &nbsp;Email Address</span><input name="email" type="email" autocomplete="email" placeholder="you@yourbusiness.com" maxlength="254" required></label>
+          <label><span>🔒 &nbsp;Password</span><input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></label>
+          <div class="auth-form-row"><label class="auth-check"><input name="rememberMe" type="checkbox"><span>Remember Me</span></label><button class="auth-text-button" type="button" id="forgot-password">Forgot Password?</button></div>
+          <button class="auth-submit" type="submit"><span>🔐</span> Login</button>
+          <div class="auth-divider"><span>OR</span></div>
+          <button class="google-button" type="button" disabled title="Google sign-in is not configured">G <span>Continue with Google</span><small>Not configured</small></button>
+          <p class="auth-switch">Don't have an account? <button class="auth-text-button" type="button" data-show="register">Create Account</button></p>
+        </form>
+
+        <form id="register-form" class="auth-form" hidden>
+          <div class="auth-register-grid">
+            <label><span>👤 &nbsp;Full Name</span><input name="name" autocomplete="name" maxlength="100" placeholder="Your full name" required></label>
+            <label><span>📱 &nbsp;Mobile Number</span><input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="+91 98765 43210" required></label>
+            <label class="auth-full"><span>📧 &nbsp;Email Address</span><input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@yourbusiness.com" required></label>
+            <label><span>🔒 &nbsp;Password</span><input name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required></label>
+            <label><span>🔒 &nbsp;Confirm Password</span><input name="confirmPassword" type="password" autocomplete="new-password" minlength="8" placeholder="Re-enter password" required></label>
+            <label class="auth-full"><span>🏢 &nbsp;Business Name</span><input name="businessName" autocomplete="organization" maxlength="120" placeholder="e.g. Ravi's Grocery Store" required></label>
+            <label class="auth-full"><span>🏷️ &nbsp;Business Type</span><select name="businessType" required><option value="" disabled selected>Select your business type</option><option>🏪 Retail / Shop</option><option>🛍️ Shopping Mall</option><option>🏠 Real Estate</option><option>🍽️ Restaurant / Café</option><option>🏨 Hotel</option><option>💇 Salon / Beauty</option><option>💊 Pharmacy</option><option>🚗 Automobile</option><option>🏭 Manufacturing</option><option>📦 Wholesale / Distribution</option><option>🛒 E-Commerce</option><option>🎓 Education</option><option>💻 Technology / Startup</option><option>💼 Professional Services</option><option>Other</option></select></label>
+          </div>
+          <label class="auth-check auth-terms"><input name="termsAccepted" type="checkbox" required><span>I agree to the <a href="#terms" id="terms-link">Terms and Conditions</a></span></label>
+          <button class="auth-submit" type="submit"><span>🚀</span> Create Account</button>
+          <p class="auth-switch">Already have an account? <button class="auth-text-button" type="button" data-show="login">Login</button></p>
+        </form>
+        <p class="auth-footnote">Private by design <span>·</span> Your account, your business, your data.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

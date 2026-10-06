@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fb">
+  <meta name="description" content="BizVision AI turns everyday sales and inventory data into clear, confident business decisions.">
+  <title>BizVision AI — Business, in focus.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" data-page="overview" aria-label="BizVision AI home">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 23.5V16m7 7.5V9m7 14.5v-11m7 11v-6" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><path d="m5 11 7-5 7 4 8-6" fill="none" stroke="#8cd9b1" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy"><strong>bizvision<span>.</span></strong><small>BUSINESS, IN FOCUS</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview" data-page="overview"><span class="nav-icon">◫</span>Overview</a>
+        <a class="nav-link" href="#daily-sales" data-page="daily-sales"><span class="nav-icon">◔</span>Daily sales</a>
+        <a class="nav-link" href="#analytics" data-page="analytics"><span class="nav-icon">⌁</span>Sales analytics</a>
+        <a class="nav-link" href="#inventory" data-page="inventory"><span class="nav-icon">▦</span>Inventory<span class="nav-count" id="low-stock-count">0</span></a>
+        <a class="nav-link" href="#profit" data-page="profit"><span class="nav-icon">↗</span>Profit analysis</a>
+        <div class="nav-divider"></div>
+        <div class="workspace-label">YOUR BUSINESS</div>
+        <a class="nav-link" href="#assistant" data-page="assistant"><span class="nav-icon">✳</span>AI assistant<span class="new-badge">AI</span></a>
+        <a class="nav-link" href="#forecast" data-page="forecast"><span class="nav-icon">🔮</span>Forecast</a>
+        <a class="nav-link" href="#reports" data-page="reports"><span class="nav-icon">▤</span>Reports</a>
+        <a class="nav-link" href="#settings" data-page="settings"><span class="nav-icon">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-spark">✳</div><strong>Your business, decoded.</strong><p>Get a clear answer to your next big question.</p><a href="#assistant" data-page="assistant">Ask BizVision <span>→</span></a></div>
+        <button class="profile-button" type="button" data-page="settings"><span class="avatar" id="sidebar-avatar">B</span><span class="profile-copy"><strong id="sidebar-business">Your business</strong><small id="sidebar-user">Your account</small></span><span class="profile-menu">⚙</span></button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="page-breadcrumb">Overview</strong></div>
+        <div class="top-actions">
+          <span class="data-status"><span class="status-dot"></span><span id="data-source-label">Your private data</span></span>
+          <button class="icon-button" id="upload-trigger" title="Import sales CSV" aria-label="Import sales CSV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 14v5h14v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <input type="file" id="csv-file" accept=".csv,text/csv" hidden>
+          <button class="top-avatar" data-page="settings" aria-label="User profile">B</button>
+        </div>
+      </header>
+      <div class="page-wrap" id="page-content" aria-live="polite"></div>
+      <footer class="app-footer"><span>© 2026 BizVision AI</span><span>Clarity for every kind of business.</span><a href="#assistant" data-page="assistant">Need a hand? Ask AI <span>→</span></a><button class="logout-button" id="logout-button" type="button">🚪 Logout</button></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
